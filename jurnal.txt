@@ -1,0 +1,35 @@
+[hari 1][03/02/1440]
+install go di raspi
+	$ sudo apt-get install golang
+
+setting GOPATH
+	https://golang.org/wiki/SettingGOPATH
+	
+	$ vi ~/.bash_profile
+		export GOPATH=$HOME/go
+		export PATH=$PATH:$(go env GOPATH)/bin
+	$ source ~/.bash_profile
+
+	mkdir -p $GOPATH/src/github.com/user
+
+hello world
+	github.com/ahmadihamid/belajargo/hello
+
+upload repo
+	git init
+	git add .
+	git commit -m "init belajar go"
+	curl -u 'ahmadihamid' https://api.github.com/user/repos -d '{"name":"hello"}'
+	git remote add origin https://github.com/ahmadihamid/hello.git
+	git push origin master
+
+[hari 2][04/02/1440]
+
+library 
+	https://golang.org/doc/code.html#Library
+	github.com/ahmadihamid/belajargo/mainkata/balik.go
+
+unit test
+	https://golang.org/doc/code.html#Testing
+	github.com/ahmadihamid/belajargo/mainkata/balik_test.go
+	- nama fungsi bisa asal? (Testblabla) gak mseti suai nama fungsi yg dites?
